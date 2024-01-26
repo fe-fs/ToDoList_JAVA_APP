@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
-        TodoList todoList = new TodoList();
+        TodoFacade todoListFacade = new TodoFacade();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -19,18 +19,16 @@ public class Main {
                 case 1:
                     System.out.print("Enter the item to add: ");
                     String addItem = scanner.nextLine();
-                    todoList.addItem(addItem);
+                    todoListFacade.todoAddItem(addItem);
                     break;
                 case 2:
                     System.out.print("Enter the item to delete: ");
                     String deleteItem = scanner.nextLine();
-                    todoList.removeItem(deleteItem);
+                    todoListFacade.todoDelItem(deleteItem);
                     break;
                 case 3:
                     System.out.println("To-do items:");
-                    for (String item : todoList.getItems()) {
-                        System.out.println(item);
-                    }
+                    todoListFacade.todoViewItem();
                     break;
                 case 4:
                     System.out.println("Exiting...");
