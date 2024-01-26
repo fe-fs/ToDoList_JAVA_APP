@@ -8,13 +8,13 @@
 public class TodoFacade {
 
     Welcome welcome = new Welcome();
-    public static void addItem(){
+    public void todoAddItem(){
 
     }
-    public static void delItem(){
+    public void todoDelItem(){
 
     }
-    public static void viewItem(){
+    public void todoViewItem(){
 
     }
 }
